@@ -7,5 +7,5 @@ export default function App() {
         cupiditate.
       </p>
     </>
-  );
+  )
 }
