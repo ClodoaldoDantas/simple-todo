@@ -5,7 +5,7 @@ export function Logo() {
   return (
     <Container>
       <div className={styles.logoContainer}>
-        <span className={styles.logo}>📝</span>
+        <span className={styles.logo}>🍎</span>
       </div>
     </Container>
   )
