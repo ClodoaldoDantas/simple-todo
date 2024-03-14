@@ -1,13 +1,5 @@
-import { AddTodo } from './components/add-todo'
-import { Banner } from './components/banner'
-import { Logo } from './components/logo'
+import { Home } from './pages/home'
 
 export default function App() {
-  return (
-    <>
-      <Banner />
-      <Logo />
-      <AddTodo />
-    </>
-  )
+  return <Home />
 }
