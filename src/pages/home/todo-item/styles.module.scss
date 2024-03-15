@@ -1,0 +1,55 @@
+.todoItem {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: var(--white);
+  border: 1px solid var(--gray-300);
+
+  display: flex;
+  align-items: center;
+}
+
+.todoLabel {
+  font-size: 1rem;
+  color: var(--gray-600);
+  margin-left: 1rem;
+
+  &.completed {
+    text-decoration: line-through;
+    color: var(--gray-400);
+  }
+}
+
+.checkboxRoot {
+  all: unset;
+  background-color: transparent;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary);
+}
+
+.checkboxRoot[data-state="checked"] {
+  background-color: var(--primary);
+}
+
+.checkboxIndicator {
+  color: var(--white);
+}
+
+.deleteButton {
+  all: unset;
+  cursor: pointer;
+  margin-left: auto;
+
+  svg {
+    transition: color 0.2s;
+    color: var(--gray-500);
+  }
+
+  &:hover svg {
+    color: var(--gray-900);
+  }
+}

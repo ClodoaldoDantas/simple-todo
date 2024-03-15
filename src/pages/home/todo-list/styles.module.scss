@@ -1,3 +1,19 @@
 .todoList {
   margin-top: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.todoItem {
+  padding: 1rem;
+  border-radius: 6px;
+  background-color: var(--white);
+  border: 1px solid var(--gray-300);
+
+  span {
+    font-size: 1rem;
+    color: var(--gray-600);
+  }
 }

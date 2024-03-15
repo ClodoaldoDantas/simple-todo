@@ -1,5 +1,6 @@
 import { Container } from '../../../components/container'
 import { useTodos } from '../../../store'
+import { TodoItem } from '../todo-item'
 import styles from './styles.module.scss'
 
 export function TodoList() {
@@ -9,7 +10,7 @@ export function TodoList() {
     <Container>
       <ul className={styles.todoList}>
         {todos.map(todo => (
-          <li key={todo.id}>{todo.description}</li>
+          <TodoItem data={todo} key={todo.id} />
         ))}
       </ul>
     </Container>
