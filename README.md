@@ -6,7 +6,8 @@
 
 O aplicativo permite aos usuários gerenciar suas tarefas de forma eficaz e personalizada.
 
-![screenshot-localhost_5173-2024 03 16-14_33_27](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/7d84b81b-7db5-4a86-b10d-71b62f9994f6)
+![preview-1](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/7d84b81b-7db5-4a86-b10d-71b62f9994f6)
+![preview-2](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/3f786527-fa66-4a38-b5a3-ff6884963140)
 
 ### ✨ Funcionalidades
 
