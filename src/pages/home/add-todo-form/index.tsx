@@ -4,9 +4,8 @@ import { useForm } from 'react-hook-form'
 import { v4 as uuidv4 } from 'uuid'
 import { z } from 'zod'
 
-import { Container } from '../../../components/container'
 import { type Todo } from '../../../interfaces/todo'
-import { useTodos } from '../../../store'
+import { useTodos } from '../../../store/todos'
 import styles from './styles.module.scss'
 
 const addTodoFormSchema = z.object({
@@ -44,21 +43,19 @@ export function AddTodoForm() {
   }
 
   return (
-    <Container>
-      <form
-        onSubmit={handleSubmit(handleSaveTodo)}
-        className={styles.addTodoForm}
-      >
-        <div className={styles.field}>
-          <ClipboardPenLine size={24} />
+    <form
+      onSubmit={handleSubmit(handleSaveTodo)}
+      className={styles.addTodoForm}
+    >
+      <div className={styles.field}>
+        <ClipboardPenLine size={24} />
 
-          <input
-            type="text"
-            placeholder="Descreva sua atividade"
-            {...register('description')}
-          />
-        </div>
-      </form>
-    </Container>
+        <input
+          type="text"
+          placeholder="Descreva sua atividade"
+          {...register('description')}
+        />
+      </div>
+    </form>
   )
 }
