@@ -1,9 +1,10 @@
 import * as Checkbox from '@radix-ui/react-checkbox'
-import { type Todo } from '../../../interfaces/todo'
-import styles from './styles.module.scss'
-import { CheckIcon, TrashIcon } from 'lucide-react'
-import { useTodos } from '../../../store'
 import classNames from 'classnames'
+import { CheckIcon, TrashIcon } from 'lucide-react'
+
+import { type Todo } from '../../../interfaces/todo'
+import { useTodos } from '../../../store'
+import styles from './styles.module.scss'
 
 export function TodoItem({ data }: { data: Todo }) {
   const toggleTodo = useTodos(state => state.toggleTodo)

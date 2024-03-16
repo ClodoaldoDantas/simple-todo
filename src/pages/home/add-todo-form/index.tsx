@@ -1,12 +1,13 @@
-import { z } from 'zod'
-import styles from './styles.module.scss'
-import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { v4 as uuidv4 } from 'uuid'
 import { ClipboardPenLine } from 'lucide-react'
+import { useForm } from 'react-hook-form'
+import { v4 as uuidv4 } from 'uuid'
+import { z } from 'zod'
+
+import { Container } from '../../../components/container'
 import { type Todo } from '../../../interfaces/todo'
 import { useTodos } from '../../../store'
-import { Container } from '../../../components/container'
+import styles from './styles.module.scss'
 
 const addTodoFormSchema = z.object({
   description: z.string(),

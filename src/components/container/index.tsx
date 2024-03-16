@@ -1,4 +1,5 @@
-import { type ReactNode, createElement } from 'react'
+import { createElement, type ReactNode } from 'react'
+
 import styles from './styles.module.scss'
 
 interface ContainerProps {
