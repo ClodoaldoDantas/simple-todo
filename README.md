@@ -2,6 +2,7 @@
 
 [![Author](https://img.shields.io/badge/author-ClodoaldoDantas-f87171)](https://github.com/ClodoaldoDantas)
 [![MIT License](https://img.shields.io/badge/License-MIT-f87171.svg)](https://choosealicense.com/licenses/mit/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/e7fe662d-47e2-4881-9e5d-10ed5651f608/deploy-status)](https://app.netlify.com/sites/simple-app-todos/deploys)
 
 O aplicativo permite aos usuários gerenciar suas tarefas de forma eficaz e personalizada.
 
