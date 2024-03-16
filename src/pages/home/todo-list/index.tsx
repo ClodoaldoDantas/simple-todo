@@ -1,5 +1,5 @@
 import { Container } from '../../../components/container'
-import { useTodos } from '../../../store'
+import { useTodos } from '../../../store/todos'
 import { TodoItem } from '../todo-item'
 import styles from './styles.module.scss'
 

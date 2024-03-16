@@ -3,7 +3,7 @@ import classNames from 'classnames'
 import { CheckIcon, TrashIcon } from 'lucide-react'
 
 import { type Todo } from '../../../interfaces/todo'
-import { useTodos } from '../../../store'
+import { useTodos } from '../../../store/todos'
 import styles from './styles.module.scss'
 
 export function TodoItem({ data }: { data: Todo }) {

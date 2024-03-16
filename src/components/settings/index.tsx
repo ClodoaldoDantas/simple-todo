@@ -1,7 +1,8 @@
 import * as DropdownMenu from '@radix-ui/react-dropdown-menu'
 import { CheckIcon, Settings2 } from 'lucide-react'
-import { useEffect, useState } from 'react'
+import { useEffect } from 'react'
 
+import { usePreferences } from '../../store/preferences'
 import styles from './styles.module.scss'
 
 interface ColorType {
@@ -29,15 +30,16 @@ const colors: ColorType[] = [
 ]
 
 export function Settings() {
-  const [currentColor, setCurrentColor] = useState('#f87171')
+  const themeColor = usePreferences(state => state.preferences.themeColor)
+  const changeThemeColor = usePreferences(state => state.changeThemeColor)
 
   useEffect(() => {
     const root = document.documentElement
-    root.style.setProperty('--primary', currentColor)
-  }, [currentColor])
+    root.style.setProperty('--primary', themeColor)
+  }, [themeColor])
 
   function handleSelectColor(item: ColorType) {
-    setCurrentColor(item.color)
+    changeThemeColor(item.color)
   }
 
   return (
@@ -67,7 +69,7 @@ export function Settings() {
 
               {item.name}
 
-              {currentColor === item.color && (
+              {themeColor === item.color && (
                 <CheckIcon style={{ marginLeft: 'auto' }} size={18} />
               )}
             </DropdownMenu.Item>

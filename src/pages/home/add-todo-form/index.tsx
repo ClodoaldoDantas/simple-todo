@@ -5,7 +5,7 @@ import { v4 as uuidv4 } from 'uuid'
 import { z } from 'zod'
 
 import { type Todo } from '../../../interfaces/todo'
-import { useTodos } from '../../../store'
+import { useTodos } from '../../../store/todos'
 import styles from './styles.module.scss'
 
 const addTodoFormSchema = z.object({
