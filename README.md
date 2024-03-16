@@ -28,3 +28,6 @@ O aplicativo permite aos usuários gerenciar suas tarefas de forma eficaz e pers
 4. Execute o comando `npm install` para instalar as dependências do projeto.
 5. Execute o comando `npm run dev` para iniciar o servidor de desenvolvimento.
 6. Acesse o projeto em seu navegador através do endereço `http://localhost:5173/`.
+
+### 📝 Licença
+Esse projeto está sob a licença MIT.
