@@ -1,0 +1,22 @@
+.trigger {
+  border-radius: 6px;
+  border: 0;
+  background-color: var(--white);
+  border: 1px solid var(--gray-300);
+  color: var(--gray-600);
+
+  height: 3.5rem;
+  width: 3.5rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 200ms;
+
+  &:hover {
+    color: var(--gray-900);
+  }
+}
+
+
+
