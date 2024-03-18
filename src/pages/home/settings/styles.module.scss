@@ -18,5 +18,30 @@
   }
 }
 
+.tabList {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  margin-bottom: 0.5rem;
+}
 
+.tabsTrigger {
+  height: 2.5rem;
+  padding: 0 0.5rem;
+  background-color: transparent;
+  border: 0;
+  border-radius: 4px;
+  flex: 1;
 
+  color: var(--gray-600);
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tabsTrigger:hover,
+.tabsTrigger[data-state='active'] {
+  background-color: var(--gray-200);
+  color: var(--gray-900);
+}

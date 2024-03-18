@@ -34,7 +34,7 @@ interface SelectColorProps {
 
 export function SelectColor({ currentColor, onSelectColor }: SelectColorProps) {
   return (
-    <>
+    <div className={styles.grid}>
       {colors.map(item => (
         <Dropdown.Item
           key={item.name}
@@ -53,6 +53,6 @@ export function SelectColor({ currentColor, onSelectColor }: SelectColorProps) {
           )}
         </Dropdown.Item>
       ))}
-    </>
+    </div>
   )
 }

@@ -1,8 +1,10 @@
-import { Settings2 } from 'lucide-react'
+import * as Tabs from '@radix-ui/react-tabs'
+import { Palette, PartyPopper, Settings2 } from 'lucide-react'
 import { useEffect } from 'react'
 
 import { Dropdown } from '../../../components/dropdown'
 import { usePreferences } from '../../../store/preferences'
+import { IconSelector } from './icon-selector'
 import { SelectColor } from './select-color'
 import styles from './styles.module.scss'
 
@@ -24,10 +26,30 @@ export function Settings() {
       </Dropdown.Trigger>
 
       <Dropdown.Content>
-        <SelectColor
-          currentColor={themeColor}
-          onSelectColor={(color: string) => changeThemeColor(color)}
-        />
+        <Tabs.Root defaultValue="colors">
+          <Tabs.List className={styles.tabList} aria-label="Opções">
+            <Tabs.Trigger className={styles.tabsTrigger} value="colors">
+              <Palette size={20} />
+              Cores
+            </Tabs.Trigger>
+
+            <Tabs.Trigger className={styles.tabsTrigger} value="icons">
+              <PartyPopper size={20} />
+              Ícones
+            </Tabs.Trigger>
+          </Tabs.List>
+
+          <Tabs.Content value="colors">
+            <SelectColor
+              currentColor={themeColor}
+              onSelectColor={(color: string) => changeThemeColor(color)}
+            />
+          </Tabs.Content>
+
+          <Tabs.Content value="icons">
+            <IconSelector />
+          </Tabs.Content>
+        </Tabs.Root>
       </Dropdown.Content>
     </Dropdown.Root>
   )
