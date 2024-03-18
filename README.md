@@ -7,7 +7,9 @@
 O aplicativo permite aos usuários gerenciar suas tarefas de forma eficaz e personalizada.
 
 ![preview-1](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/7d84b81b-7db5-4a86-b10d-71b62f9994f6)
-![preview-2](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/3f786527-fa66-4a38-b5a3-ff6884963140)
+![preview-2](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/db4f8869-7426-464a-bfef-a27908da4b76)
+![preview-3](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/f8a2d1c5-a203-40b7-8b18-6ec404466abd)
+
 
 ### ✨ Funcionalidades
 
@@ -15,6 +17,7 @@ O aplicativo permite aos usuários gerenciar suas tarefas de forma eficaz e pers
 - **Excluir Tarefa:** Os usuários podem excluir tarefas da lista clicando no ícone de exclusão associado a cada tarefa.
 - **Concluir Tarefa:** Os usuários podem concluir tarefas da lista ao clicar no **checkbox** associado a cada tarefa.
 - **Persistência:** As tarefas adicionadas pelo usuário persistem mesmo depois de a página ser atualizada, pelo **localStorage**.
+- **Personalização:** O usuário tem a possibilidade de trocar as cores e o ícone da página de acordo com suas preferências.
 
 ## 🚀 Tecnologias
 
