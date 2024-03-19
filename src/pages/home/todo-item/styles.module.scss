@@ -6,6 +6,8 @@
 
   display: flex;
   align-items: center;
+
+  cursor: move;
 }
 
 .todoLabel {
@@ -29,6 +31,7 @@
   align-items: center;
   justify-content: center;
   border: 2px solid var(--primary);
+  cursor: pointer;
 }
 
 .checkboxRoot[data-state="checked"] {
