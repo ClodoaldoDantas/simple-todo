@@ -1,12 +1,17 @@
 import * as Checkbox from '@radix-ui/react-checkbox'
 import classNames from 'classnames'
 import { CheckIcon, TrashIcon } from 'lucide-react'
+import { type ComponentProps } from 'react'
 
 import { type Todo } from '../../../interfaces/todo'
 import { useTodos } from '../../../store/todos'
 import styles from './styles.module.scss'
 
-export function TodoItem({ data }: { data: Todo }) {
+interface TodoItemProps extends ComponentProps<'li'> {
+  data: Todo
+}
+
+export function TodoItem({ data, ...props }: TodoItemProps) {
   const toggleTodo = useTodos(state => state.toggleTodo)
   const removeTodo = useTodos(state => state.removeTodo)
 
@@ -20,7 +25,7 @@ export function TodoItem({ data }: { data: Todo }) {
   }
 
   return (
-    <li className={styles.todoItem}>
+    <li className={styles.todoItem} {...props}>
       <Checkbox.Root
         checked={data.completed}
         onCheckedChange={handleToggleTodo}

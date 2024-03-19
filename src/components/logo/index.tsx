@@ -5,8 +5,6 @@ import styles from './styles.module.scss'
 export function Logo() {
   const icon = usePreferences(state => state.preferences.icon)
 
-  console.log(icon)
-
   return (
     <Container>
       <div className={styles.logoContainer}>
