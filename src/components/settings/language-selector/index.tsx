@@ -2,8 +2,8 @@ import * as RadioGroup from '@radix-ui/react-radio-group'
 import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { FlagBR } from '../../../../components/flags/flag-br'
-import { FlagUS } from '../../../../components/flags/flag-us'
+import { FlagBR } from '../../flags/flag-br'
+import { FlagUS } from '../../flags/flag-us'
 import styles from './styles.module.scss'
 
 export function LanguageSelector() {

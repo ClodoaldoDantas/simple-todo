@@ -1,6 +1,6 @@
 import { CheckIcon } from 'lucide-react'
 
-import { Dropdown } from '../../../../components/dropdown'
+import { Dropdown } from '../../dropdown'
 import styles from './styles.module.scss'
 
 interface ColorType {

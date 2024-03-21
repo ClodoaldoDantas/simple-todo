@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { v4 as uuidv4 } from 'uuid'
 import { z } from 'zod'
 
+import { Container } from '../../../components/container'
 import { type Todo } from '../../../interfaces/todo'
 import { useTodos } from '../../../store/todos'
 import styles from './styles.module.scss'
@@ -45,19 +46,21 @@ export function AddTodoForm() {
   }
 
   return (
-    <form
-      onSubmit={handleSubmit(handleSaveTodo)}
-      className={styles.addTodoForm}
-    >
-      <div className={styles.field}>
-        <ClipboardPenLine size={24} />
+    <Container>
+      <form
+        onSubmit={handleSubmit(handleSaveTodo)}
+        className={styles.addTodoForm}
+      >
+        <div className={styles.field}>
+          <ClipboardPenLine size={24} />
 
-        <input
-          type="text"
-          placeholder={t('placeholder')}
-          {...register('description')}
-        />
-      </div>
-    </form>
+          <input
+            type="text"
+            placeholder={t('placeholder')}
+            {...register('description')}
+          />
+        </div>
+      </form>
+    </Container>
   )
 }

@@ -1,6 +1,6 @@
 import EmojiPicker, { type EmojiClickData } from 'emoji-picker-react'
 
-import { usePreferences } from '../../../../store/preferences'
+import { usePreferences } from '../../../store/preferences'
 
 export function IconSelector() {
   const changeIcon = usePreferences(state => state.changeIcon)

@@ -1,10 +1,10 @@
 import * as Tabs from '@radix-ui/react-tabs'
-import { Globe, Palette, PartyPopper, Settings2 } from 'lucide-react'
+import { Globe, Palette, PartyPopper, SettingsIcon } from 'lucide-react'
 import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 
-import { Dropdown } from '../../../components/dropdown'
-import { usePreferences } from '../../../store/preferences'
+import { usePreferences } from '../../store/preferences'
+import { Dropdown } from '../dropdown'
 import { IconSelector } from './icon-selector'
 import { LanguageSelector } from './language-selector'
 import { SelectColor } from './select-color'
@@ -24,7 +24,7 @@ export function Settings() {
     <Dropdown.Root>
       <Dropdown.Trigger>
         <button className={styles.trigger}>
-          <Settings2 size={20} />
+          <SettingsIcon size={24} />
         </button>
       </Dropdown.Trigger>
 
