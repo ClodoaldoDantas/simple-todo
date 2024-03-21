@@ -1,4 +1,5 @@
 import './styles/global.scss'
+import './lib/i18n.ts'
 
 import React from 'react'
 import ReactDOM from 'react-dom/client'

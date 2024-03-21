@@ -1,6 +1,7 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { ClipboardPenLine } from 'lucide-react'
 import { useForm } from 'react-hook-form'
+import { useTranslation } from 'react-i18next'
 import { v4 as uuidv4 } from 'uuid'
 import { z } from 'zod'
 
@@ -15,6 +16,7 @@ const addTodoFormSchema = z.object({
 type AddTodoFormData = z.infer<typeof addTodoFormSchema>
 
 export function AddTodoForm() {
+  const { t } = useTranslation()
   const addTodo = useTodos(state => state.addTodo)
 
   const { register, handleSubmit, reset } = useForm<AddTodoFormData>({
@@ -52,7 +54,7 @@ export function AddTodoForm() {
 
         <input
           type="text"
-          placeholder="Descreva sua atividade"
+          placeholder={t('placeholder')}
           {...register('description')}
         />
       </div>

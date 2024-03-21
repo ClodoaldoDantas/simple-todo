@@ -11,7 +11,7 @@ export function IconSelector() {
 
   return (
     <div>
-      <EmojiPicker width={300} onEmojiClick={handleEmojiClick} />
+      <EmojiPicker width={380} onEmojiClick={handleEmojiClick} />
     </div>
   )
 }
