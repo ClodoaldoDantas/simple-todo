@@ -1,6 +1,7 @@
 import * as Tabs from '@radix-ui/react-tabs'
 import { Globe, Palette, PartyPopper, Settings2 } from 'lucide-react'
 import { useEffect } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { Dropdown } from '../../../components/dropdown'
 import { usePreferences } from '../../../store/preferences'
@@ -10,6 +11,7 @@ import { SelectColor } from './select-color'
 import styles from './styles.module.scss'
 
 export function Settings() {
+  const { t } = useTranslation()
   const themeColor = usePreferences(state => state.preferences.themeColor)
   const changeThemeColor = usePreferences(state => state.changeThemeColor)
 
@@ -31,17 +33,18 @@ export function Settings() {
           <Tabs.List className={styles.tabList} aria-label="Opções">
             <Tabs.Trigger className={styles.tabsTrigger} value="colors">
               <Palette size={20} />
-              Cores
+              {t('settings.colors')}
             </Tabs.Trigger>
 
             <Tabs.Trigger className={styles.tabsTrigger} value="icons">
               <PartyPopper size={20} />
-              Ícones
+              {t('settings.icons')}
             </Tabs.Trigger>
 
             <Tabs.Trigger className={styles.tabsTrigger} value="languages">
               <Globe size={20} />
-              Idiomas
+
+              {t('settings.languages')}
             </Tabs.Trigger>
           </Tabs.List>
 
