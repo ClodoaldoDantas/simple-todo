@@ -6,18 +6,20 @@
 
 O aplicativo permite aos usuários gerenciar suas tarefas de forma eficaz e personalizada.
 
-![preview-1](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/7d84b81b-7db5-4a86-b10d-71b62f9994f6)
-![preview-2](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/db4f8869-7426-464a-bfef-a27908da4b76)
-![preview-3](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/f8a2d1c5-a203-40b7-8b18-6ec404466abd)
+![Captura de tela de 2024-03-21 09-59-06](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/8fd11d69-26a2-4e62-9f87-660f987e684a)
+![Captura de tela de 2024-03-21 09-59-28](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/bba72ffa-0568-4810-9fb4-29d49366ff78)
+![Captura de tela de 2024-03-21 09-59-47](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/18fb08ad-d0e7-4e86-9224-25237183899e)
+![Captura de tela de 2024-03-21 09-59-54](https://github.com/ClodoaldoDantas/simple-todo/assets/32376905/0cbf277a-0808-45e4-8d82-11bccefffe43)
 
 
 ### ✨ Funcionalidades
 
-- **Adicionar Tarefa:** Os usuários podem adicionar tarefas à sua lista.
-- **Excluir Tarefa:** Os usuários podem excluir tarefas da lista clicando no ícone de exclusão associado a cada tarefa.
-- **Concluir Tarefa:** Os usuários podem concluir tarefas da lista ao clicar no **checkbox** associado a cada tarefa.
-- **Persistência:** As tarefas adicionadas pelo usuário persistem mesmo depois de a página ser atualizada, pelo **localStorage**.
-- **Personalização:** O usuário tem a possibilidade de trocar as cores e o ícone da página de acordo com suas preferências.
+- **📝 Adicionar Tarefa:** Os usuários podem adicionar tarefas à sua lista.
+- **🗑️ Excluir Tarefa:** Os usuários podem excluir tarefas da lista clicando no ícone de exclusão associado a cada tarefa.
+- **✅ Concluir Tarefa:** Os usuários podem concluir tarefas da lista ao clicar no **checkbox** associado a cada tarefa.
+- **🛢 Persistência:** As tarefas adicionadas pelo usuário persistem mesmo depois de a página ser atualizada, pelo **localStorage**.
+- **💄 Personalização:** O usuário tem a possibilidade de trocar as cores e o ícone da página de acordo com suas preferências.
+- **🌐 Idiomas:** O usuário tem a possibilidade de trocar o idioma da página de acordo com suas preferências.
 
 ## 🚀 Tecnologias
 
