@@ -25,7 +25,7 @@ describe('Todos', () => {
 
     cy.get('#todo-list li')
       .first()
-      .find('button[aria-label="Remover atividade"]')
+      .find('button[data-testid="remove-button"]')
       .click()
 
     cy.get('#todo-list li').should('have.length', 1)

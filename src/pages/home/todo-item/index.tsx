@@ -2,6 +2,7 @@ import * as Checkbox from '@radix-ui/react-checkbox'
 import classNames from 'classnames'
 import { CheckIcon, TrashIcon } from 'lucide-react'
 import { type ComponentProps } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { type Todo } from '../../../interfaces/todo'
 import { useTodos } from '../../../store/todos'
@@ -12,6 +13,8 @@ interface TodoItemProps extends ComponentProps<'li'> {
 }
 
 export function TodoItem({ data, ...props }: TodoItemProps) {
+  const { t } = useTranslation()
+
   const toggleTodo = useTodos(state => state.toggleTodo)
   const removeTodo = useTodos(state => state.removeTodo)
 
@@ -50,7 +53,8 @@ export function TodoItem({ data, ...props }: TodoItemProps) {
         type="button"
         onClick={handleRemoveTodo}
         className={styles.deleteButton}
-        aria-label="Remover atividade"
+        data-testid="remove-button"
+        aria-label={t('removeTodoAriaLabel')}
       >
         <TrashIcon size={20} />
       </button>
