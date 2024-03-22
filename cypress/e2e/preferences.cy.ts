@@ -32,12 +32,14 @@ describe('Preferences', () => {
   })
 
   it('should be able to change the language', () => {
+    cy.get("button[data-testid='open-settings']").click()
+
+    cy.get("div[role='tablist'] button").eq(2).click()
+    cy.get("label[for='portuguese']").click()
     cy.get('input').should('have.attr', 'placeholder', 'Descreva sua atividade')
 
-    cy.get("button[data-testid='open-settings']").click()
     cy.get("div[role='tablist'] button").eq(2).click()
     cy.get("label[for='english']").click()
-
     cy.get('input').should('have.attr', 'placeholder', 'Describe your activity')
   })
 })
