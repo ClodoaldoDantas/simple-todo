@@ -8,7 +8,9 @@ export function Logo() {
   return (
     <Container>
       <div className={styles.logoContainer}>
-        <span className={styles.logo}>{icon}</span>
+        <span data-testid="logo" className={styles.logo}>
+          {icon}
+        </span>
       </div>
     </Container>
   )
