@@ -56,7 +56,7 @@ export function AddTodoForm() {
 
           <input
             type="text"
-            placeholder={t('placeholder')}
+            placeholder={t('inputPlaceholder')}
             {...register('description')}
           />
         </div>

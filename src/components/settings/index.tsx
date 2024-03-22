@@ -23,7 +23,7 @@ export function Settings() {
   return (
     <Dropdown.Root>
       <Dropdown.Trigger>
-        <button className={styles.trigger}>
+        <button data-testid="open-settings" className={styles.trigger}>
           <SettingsIcon size={24} />
         </button>
       </Dropdown.Trigger>

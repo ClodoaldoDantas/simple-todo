@@ -1,5 +1,7 @@
 {
-  "placeholder": "Descreva sua atividade",
+  "inputPlaceholder": "Descreva sua atividade",
+  "removeTodoAriaLabel": "Remover Tarefa",
+  "languageSelectorAriaLabel": "Selecione o idioma do aplicativo",
   "settings": {
     "colors": "Cores",
     "icons": "Ícones",

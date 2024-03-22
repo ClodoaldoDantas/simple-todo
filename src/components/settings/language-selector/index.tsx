@@ -7,7 +7,7 @@ import { FlagUS } from '../../flags/flag-us'
 import styles from './styles.module.scss'
 
 export function LanguageSelector() {
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const [selectedLanguage, setSelectedLanguage] = useState(i18n.language)
 
   function handleLanguageChange(value: string) {
@@ -20,7 +20,7 @@ export function LanguageSelector() {
       className={styles.radioGroupRoot}
       value={selectedLanguage}
       onValueChange={handleLanguageChange}
-      aria-label="Selecione o idioma do aplicativo"
+      aria-label={t('languageSelectorAriaLabel')}
     >
       <div className={styles.radioGroupContent}>
         <RadioGroup.Item

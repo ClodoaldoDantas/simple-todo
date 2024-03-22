@@ -4,10 +4,10 @@ import styles from './styles.module.scss'
 
 export function Banner() {
   return (
-    <div className={styles.banner}>
+    <header id="banner" className={styles.banner}>
       <Container className={styles.container}>
         <Settings />
       </Container>
-    </div>
+    </header>
   )
 }

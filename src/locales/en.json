@@ -1,5 +1,7 @@
 {
-  "placeholder": "Describe your activity",
+  "inputPlaceholder": "Describe your activity",
+  "removeTodoAriaLabel": "Remove Task",
+  "languageSelectorAriaLabel": "Select the application language",
   "settings": {
     "colors": "Colors",
     "icons": "Icons",
