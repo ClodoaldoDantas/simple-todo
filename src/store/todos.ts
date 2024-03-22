@@ -10,6 +10,7 @@ interface TodoState {
   removeTodo: (id: string) => void
   toggleTodo: (id: string, isCompleted: boolean) => void
   updateList: (newList: Todo[]) => void
+  clearTodos: () => void
 }
 
 export const useTodos = create<TodoState>()(
@@ -36,6 +37,9 @@ export const useTodos = create<TodoState>()(
         },
         updateList: newList => {
           set({ todos: newList })
+        },
+        clearTodos: () => {
+          set({ todos: [] })
         },
       }),
       {

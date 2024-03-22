@@ -2,6 +2,7 @@
   "inputPlaceholder": "Descreva sua atividade",
   "removeTodoAriaLabel": "Remover Tarefa",
   "languageSelectorAriaLabel": "Selecione o idioma do aplicativo",
+  "clearTodosLabel": "Limpar Dados",
   "settings": {
     "colors": "Cores",
     "icons": "Ícones",

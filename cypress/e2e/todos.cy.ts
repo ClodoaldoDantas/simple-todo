@@ -30,4 +30,13 @@ describe('Todos', () => {
 
     cy.get('#todo-list li').should('have.length', 1)
   })
+
+  it('should be able to clear all tasks', () => {
+    cy.createTodos(['Beber café', 'Estudar para a prova'])
+    cy.get('#todo-list li').should('have.length', 2)
+
+    cy.get('button[data-testid="clear-todos"]').click()
+
+    cy.get('#todo-list li').should('have.length', 0)
+  })
 })

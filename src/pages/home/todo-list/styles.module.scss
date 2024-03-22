@@ -5,3 +5,24 @@
   flex-direction: column;
   gap: 0.75rem;
 }
+
+.todoActions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 1.5rem;
+}
+
+.clearButton {
+  all: unset;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  color: var(--gray-600);
+  transition: color 0.2s;
+
+  &:hover {
+    color: var(--gray-900);
+  }
+}

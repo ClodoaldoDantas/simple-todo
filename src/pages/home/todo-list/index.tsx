@@ -1,4 +1,6 @@
+import { PackageX } from 'lucide-react'
 import { useRef } from 'react'
+import { useTranslation } from 'react-i18next'
 
 import { Container } from '../../../components/container'
 import { useTodos } from '../../../store/todos'
@@ -6,8 +8,10 @@ import { TodoItem } from '../todo-item'
 import styles from './styles.module.scss'
 
 export function TodoList() {
+  const { t } = useTranslation()
   const todos = useTodos(state => state.todos)
   const updateList = useTodos(state => state.updateList)
+  const clearTodos = useTodos(state => state.clearTodos)
 
   const dragItem = useRef<number>(0)
   const dragOverItem = useRef<number>(0)
@@ -38,6 +42,19 @@ export function TodoList() {
           />
         ))}
       </ul>
+
+      {todos.length > 0 && (
+        <div className={styles.todoActions}>
+          <button
+            onClick={clearTodos}
+            data-testid="clear-todos"
+            className={styles.clearButton}
+          >
+            <PackageX size={20} />
+            <span>{t('clearTodosLabel')}</span>
+          </button>
+        </div>
+      )}
     </Container>
   )
 }
