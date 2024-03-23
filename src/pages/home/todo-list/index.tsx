@@ -29,7 +29,7 @@ export function TodoList() {
   }
 
   return (
-    <Container>
+    <Container className={styles.todoListContainer}>
       <ul id="todo-list" className={styles.todoList}>
         {todos.map((todo, index) => (
           <TodoItem
