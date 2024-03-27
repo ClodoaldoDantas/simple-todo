@@ -1,18 +1,18 @@
 import * as Checkbox from '@radix-ui/react-checkbox'
 import classNames from 'classnames'
-import { CheckIcon, TrashIcon } from 'lucide-react'
-import { type ComponentProps } from 'react'
+import { Reorder } from 'framer-motion'
+import { CheckIcon, Grip, TrashIcon } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
 
 import { type Todo } from '../../../interfaces/todo'
 import { useTodos } from '../../../store/todos'
 import styles from './styles.module.scss'
 
-interface TodoItemProps extends ComponentProps<'li'> {
+interface TodoItemProps {
   data: Todo
 }
 
-export function TodoItem({ data, ...props }: TodoItemProps) {
+export function TodoItem({ data }: TodoItemProps) {
   const { t } = useTranslation()
 
   const toggleTodo = useTodos(state => state.toggleTodo)
@@ -28,7 +28,7 @@ export function TodoItem({ data, ...props }: TodoItemProps) {
   }
 
   return (
-    <li className={styles.todoItem} {...props}>
+    <Reorder.Item as="li" value={data} className={styles.todoItem}>
       <Checkbox.Root
         checked={data.completed}
         onCheckedChange={handleToggleTodo}
@@ -49,15 +49,19 @@ export function TodoItem({ data, ...props }: TodoItemProps) {
         {data.description}
       </label>
 
-      <button
-        type="button"
-        onClick={handleRemoveTodo}
-        className={styles.deleteButton}
-        data-testid="remove-button"
-        aria-label={t('removeTodoAriaLabel')}
-      >
-        <TrashIcon size={20} />
-      </button>
-    </li>
+      <div className={styles.actions}>
+        <Grip size={20} className={styles.gripIcon} />
+
+        <button
+          type="button"
+          onClick={handleRemoveTodo}
+          className={styles.deleteButton}
+          data-testid="remove-button"
+          aria-label={t('removeTodoAriaLabel')}
+        >
+          <TrashIcon size={20} />
+        </button>
+      </div>
+    </Reorder.Item>
   )
 }

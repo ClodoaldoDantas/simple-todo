@@ -20,6 +20,7 @@
     "@radix-ui/react-tabs": "^1.0.4",
     "classnames": "^2.5.1",
     "emoji-picker-react": "^4.8.0",
+    "framer-motion": "^11.0.22",
     "i18next": "^23.10.1",
     "i18next-browser-languagedetector": "^7.2.0",
     "immer": "^10.0.4",

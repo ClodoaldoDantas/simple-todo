@@ -1,8 +1,9 @@
+import { Reorder } from 'framer-motion'
 import { PackageX } from 'lucide-react'
-import { useRef } from 'react'
 import { useTranslation } from 'react-i18next'
 
 import { Container } from '../../../components/container'
+import { type Todo } from '../../../interfaces/todo'
 import { useTodos } from '../../../store/todos'
 import { TaskProgress } from '../task-progress'
 import { TodoItem } from '../todo-item'
@@ -14,35 +15,24 @@ export function TodoList() {
   const updateList = useTodos(state => state.updateList)
   const clearTodos = useTodos(state => state.clearTodos)
 
-  const dragItem = useRef<number>(0)
-  const dragOverItem = useRef<number>(0)
-
-  function handleSort() {
-    const cloneTodos = [...todos]
-
-    const temp = cloneTodos[dragItem.current]
-
-    cloneTodos[dragItem.current] = cloneTodos[dragOverItem.current]
-    cloneTodos[dragOverItem.current] = temp
-
-    updateList(cloneTodos)
+  function handleSort(newOrder: Todo[]) {
+    updateList(newOrder)
   }
 
   return (
     <Container className={styles.todoListContainer}>
-      <ul id="todo-list" className={styles.todoList}>
-        {todos.map((todo, index) => (
-          <TodoItem
-            data={todo}
-            key={todo.id}
-            draggable
-            onDragStart={() => (dragItem.current = index)}
-            onDragEnter={() => (dragOverItem.current = index)}
-            onDragEnd={handleSort}
-            onDragOver={event => event.preventDefault()}
-          />
+      <Reorder.Group
+        as="ul"
+        axis="y"
+        id="todo-list"
+        values={todos}
+        onReorder={handleSort}
+        className={styles.todoList}
+      >
+        {todos.map(todo => (
+          <TodoItem data={todo} key={todo.id} />
         ))}
-      </ul>
+      </Reorder.Group>
 
       {todos.length > 0 && (
         <div className={styles.todoActions}>

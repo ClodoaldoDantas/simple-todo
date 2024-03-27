@@ -6,14 +6,14 @@
 
   display: flex;
   align-items: center;
-
-  cursor: move;
 }
 
 .todoLabel {
   font-size: 1rem;
   color: var(--gray-600);
   margin-left: 1rem;
+
+  cursor: pointer;
 
   &.completed {
     text-decoration: line-through;
@@ -42,17 +42,28 @@
   color: var(--white);
 }
 
-.deleteButton {
-  all: unset;
-  cursor: pointer;
+.actions {
   margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
 
-  svg {
-    transition: color 0.2s;
-    color: var(--gray-500);
+  .gripIcon {
+    cursor: grabbing;
   }
-
-  &:hover svg {
-    color: var(--gray-900);
+  
+  .deleteButton {
+    all: unset;
+    cursor: pointer;
+  
+    svg {
+      transition: color 0.2s;
+      color: var(--gray-500);
+    }
+  
+    &:hover svg {
+      color: var(--gray-900);
+    }
   }
 }
+
