@@ -5,6 +5,7 @@ import { useTranslation } from 'react-i18next'
 import { Container } from '../../../components/container'
 import { type Todo } from '../../../interfaces/todo'
 import { useTodos } from '../../../store/todos'
+import { EmptyList } from '../empty-list'
 import { TaskProgress } from '../task-progress'
 import { TodoItem } from '../todo-item'
 import styles from './styles.module.scss'
@@ -18,6 +19,8 @@ export function TodoList() {
   function handleSort(newOrder: Todo[]) {
     updateList(newOrder)
   }
+
+  const listIsEmpty = todos.length === 0
 
   return (
     <Container className={styles.todoListContainer}>
@@ -34,7 +37,9 @@ export function TodoList() {
         ))}
       </Reorder.Group>
 
-      {todos.length > 0 && (
+      {listIsEmpty ? (
+        <EmptyList />
+      ) : (
         <div className={styles.todoActions}>
           <TaskProgress />
 
