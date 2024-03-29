@@ -3,6 +3,8 @@
   "removeTodoAriaLabel": "Remove Task",
   "languageSelectorAriaLabel": "Select the application language",
   "clearTodosLabel": "Clear Data",
+  "emptyListTitle": "All caught up",
+  "emptyListDescription": "Your to-do list is clear and ready for new challenges!",
   "settings": {
     "colors": "Colors",
     "icons": "Icons",

@@ -3,6 +3,8 @@
   "removeTodoAriaLabel": "Remover Tarefa",
   "languageSelectorAriaLabel": "Selecione o idioma do aplicativo",
   "clearTodosLabel": "Limpar Dados",
+  "emptyListTitle": "Tudo em dia",
+  "emptyListDescription": "Sua lista de tarefas está limpa e pronta para novos desafios!",
   "settings": {
     "colors": "Cores",
     "icons": "Ícones",
